@@ -2,15 +2,16 @@
 
 把「拍脑袋立项」变成「看证据立项」。每一次评级产出一份可追溯的 SABC 判决书。
 
-## 一条命令安装（其他电脑）
+## 别人电脑一键安装（不用先装 Node / Git）
 
-其他电脑已登录同一 GitHub 账号（`gh auth login`）后，执行：
+把仓库里的安装脚本拷到对方电脑，双击即可。脚本会自动安装 Node.js、下载项目、安装依赖并启动。
 
-```bash
-gh repo clone zxc9802/sabc-judge && cd sabc-judge && cp .env.example .env.local && npm install && npm run dev
-```
+- **Mac**：双击 `一键安装.command`。若提示“无法打开”，按 **右键 → 打开**。安装 Node 时会要一次本机密码。
+- **Windows**：双击 `一键安装.bat`，在弹出的窗口里允许管理员权限。
 
-然后编辑 `.env.local` 填入 `LLM_API_KEY`（以及可选的博查 / AnySearch 密钥），打开 http://localhost:3000
+启动后按提示粘贴 OpenLux API Key，浏览器会打开 http://localhost:3000
+
+也可以只发这两个脚本文件；对方电脑有网时会自动从 GitHub 拉取源码。
 
 ## 启动
 
